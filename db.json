@@ -1,16 +1,22 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "tafefa": "Estudar C#",
+      "id": 2,
+      "task": "Estudar Java",
+      "categoria": "Faculdade",
+      "concluido": true
+    },
+    {
+      "id": 3,
+      "task": "Estudar Angular",
       "categoria": "Faculdade",
       "concluido": false
     },
     {
-      "id": 2,
-      "tafefa": "Estudar Angular",
+      "id": 4,
+      "task": "Estudar React",
       "categoria": "Trabalho",
-      "concluido": true
+      "concluido": false
     }
   ]
 }

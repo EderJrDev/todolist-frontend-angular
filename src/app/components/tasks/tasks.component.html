@@ -1,1 +1,11 @@
+<!-- <ul>
+  <li *ngFor="let task of tasks">{{ task.tarefa }}</li>
+</ul>
+<p *ngIf="tasks.length === 0">Nenhuma tarefa encontrada.</p> -->
 
+<app-task-item
+  *ngFor="let task of tasks"
+  [task]="task"
+  (onDeleteTask)="deleteTask($event)"
+  (onToggleConcluido)="toggleConcluiido($event)"
+></app-task-item>
