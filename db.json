@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "tafefa": "Estudar C#",
+      "categoria": "Faculdade",
+      "concluido": false
+    },
+    {
+      "id": 2,
+      "tafefa": "Estudar Angular",
+      "categoria": "Trabalho",
+      "concluido": true
+    }
+  ]
+}
