@@ -10,13 +10,19 @@
       "id": 3,
       "task": "Estudar Angular",
       "categoria": "Faculdade",
-      "concluido": false
+      "concluido": true
     },
     {
       "id": 4,
       "task": "Estudar React",
       "categoria": "Trabalho",
       "concluido": false
+    },
+    {
+      "task": "smart",
+      "categoria": "casa",
+      "concluido": false,
+      "id": 5
     }
   ]
 }

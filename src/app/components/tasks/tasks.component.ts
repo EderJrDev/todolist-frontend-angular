@@ -3,10 +3,16 @@ import { TaskService } from '../../services/task.service';
 import { Task } from '../../../Task';
 import { CommonModule } from '@angular/common';
 import { TaskItemComponent } from '../task-item/task-item.component';
+import { AddTaskComponent } from '../add-task/add-task.component';
 
 @Component({
   selector: 'app-tasks',
-  imports: [CommonModule, TaskItemComponent],
+  imports: [
+    CommonModule,
+    TaskItemComponent,
+    AddTaskComponent,
+    AddTaskComponent,
+  ],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })
@@ -25,7 +31,7 @@ export class TasksComponent {
     this.taskService
       .deleteTask(task)
       .subscribe(
-        () => (this.tasks = this.tasks.filter((t) => t.id == task.id))
+        () => (this.tasks = this.tasks.filter((t) => t.id != task.id))
       );
   }
 
@@ -33,5 +39,11 @@ export class TasksComponent {
     console.log(task);
     task.concluido = !task.concluido;
     this.taskService.updateTask(task).subscribe();
+  }
+
+  AddTask(tarefa: Task) {
+    this.taskService.addTask(tarefa).subscribe((tarefa) => {
+      this.tasks.push(tarefa);
+    });
   }
 }

@@ -1,7 +1,4 @@
-<!-- <ul>
-  <li *ngFor="let task of tasks">{{ task.tarefa }}</li>
-</ul>
-<p *ngIf="tasks.length === 0">Nenhuma tarefa encontrada.</p> -->
+<app-add-task (onAddTask)="AddTask($event)"></app-add-task>
 
 <app-task-item
   *ngFor="let task of tasks"
