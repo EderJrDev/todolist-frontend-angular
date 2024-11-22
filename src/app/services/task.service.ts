@@ -24,6 +24,7 @@ export class TaskService {
   }
 
   addTask(task: Task): Observable<Task> {
+    console.log('Enviando tarefa para o servidor:', task);
     return this.http.post<Task>(`${this.apiUrl}`, task);
   }
 }

@@ -7,12 +7,7 @@ import { AddTaskComponent } from '../add-task/add-task.component';
 
 @Component({
   selector: 'app-tasks',
-  imports: [
-    CommonModule,
-    TaskItemComponent,
-    AddTaskComponent,
-    AddTaskComponent,
-  ],
+  imports: [CommonModule, TaskItemComponent, AddTaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.css',
 })
@@ -43,6 +38,8 @@ export class TasksComponent {
 
   AddTask(tarefa: Task) {
     this.taskService.addTask(tarefa).subscribe((tarefa) => {
+      console.log(tarefa, 'tarefa');
+      console.log(this.tasks, 'this tasks');
       this.tasks.push(tarefa);
     });
   }
