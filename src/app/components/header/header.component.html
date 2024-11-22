@@ -2,4 +2,18 @@
   <h1>
     {{ title }}
   </h1>
+
+  @if (mostrarAddTarefa) {
+  <app-button
+    text="Fechar"
+    color="red"
+    (btnClick)="AlteraVisualizacao(false)"
+  ></app-button>
+  } @else {
+  <app-button
+    text="Adicionar Tarefa"
+    color="green"
+    (btnClick)="AlteraVisualizacao(true)"
+  ></app-button>
+  }
 </header>

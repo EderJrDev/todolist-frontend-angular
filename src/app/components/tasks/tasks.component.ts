@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TaskService } from '../../services/task.service';
 import { Task } from '../../../Task';
 import { CommonModule } from '@angular/common';
@@ -14,6 +14,8 @@ import { AddTaskComponent } from '../add-task/add-task.component';
 export class TasksComponent {
   tasks: Task[] = [];
   constructor(private taskService: TaskService) {}
+
+  @Input() mostrarAddTarefa: boolean = false; 
 
   ngOnInit(): void {
     this.taskService.getTasks().subscribe((data) => {

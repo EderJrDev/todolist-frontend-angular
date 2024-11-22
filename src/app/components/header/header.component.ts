@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import { CommonModule } from '@angular/common';
 
@@ -10,10 +10,6 @@ import { CommonModule } from '@angular/common';
 })
 export class HeaderComponent {
   title: string = 'Tarefas';
-
-  mostrarAddTarefa: boolean = false;
-
-  AlteraVisualizacao(valor: boolean) {
-    this.mostrarAddTarefa = valor;
-  }
+  @Input() mostrarAddTarefa: boolean = false;
+  @Input() AlteraVisualizacao!: (valor: boolean) => void;
 }

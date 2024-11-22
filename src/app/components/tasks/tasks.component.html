@@ -1,4 +1,7 @@
-<app-add-task (onAddTask)="AddTask($event)"></app-add-task>
+<app-add-task
+  [mostrarAddTarefa]="mostrarAddTarefa"
+  (onAddTask)="AddTask($event)"
+></app-add-task>
 
 <app-task-item
   *ngFor="let task of tasks"

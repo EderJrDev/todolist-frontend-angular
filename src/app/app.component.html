@@ -1,4 +1,9 @@
 <div class="container">
-  <app-header></app-header>
-  <app-tasks></app-tasks>
+  <app-header
+    [mostrarAddTarefa]="mostrarAddTarefa"
+    [AlteraVisualizacao]="AlteraVisualizacao.bind(this)"
+  >
+    ></app-header
+  >
+  <app-tasks [mostrarAddTarefa]="mostrarAddTarefa"></app-tasks>
 </div>
